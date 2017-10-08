@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/seleznevae/jag.svg?branch=master)](https://travis-ci.org/seleznevae/jag)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![GitHub tag](https://img.shields.io/github/tag/expressjs/express.svg)]()
 
 jag - just a grapher
 
