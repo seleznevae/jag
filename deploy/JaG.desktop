@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=jag
+Comment=Jag - program for telemetry veiwing
+Exec=jag %F
+Icon=jag
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+
+Name[ru_RU]=jag

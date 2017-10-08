@@ -1,4 +1,4 @@
-TARGET = JaG
+TARGET = jag
 QT += network
 QT += widgets
 QT += printsupport

@@ -42,12 +42,12 @@ script:
   
 after_success:
   - ls ./*.AppImage
-  - curl --upload-file ./JaG*.AppImage https://transfer.sh/APPNAME-git.$(git rev-parse --short HEAD)-x86_64.AppImage
+  - curl --upload-file ./jag*.AppImage https://transfer.sh/APPNAME-git.$(git rev-parse --short HEAD)-x86_64.AppImage
   
 deploy:
   provider: releases
   api_key: '$GITHUB_API_KEY'
-  file: 'JaG-x86_64.AppImage'
+  file: 'jag-x86_64.AppImage'
   skip_cleanup: true
   on:
     tags: true
