@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>JagMainWindow</class>
+ <widget class="QMainWindow" name="JagMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/hat</normaloff>:/hat</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="MyTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionTips"/>
+    <addaction name="actionAbout_JaG"/>
+    <addaction name="actionAbout_Qt"/>
+   </widget>
+   <widget class="QMenu" name="menuData">
+    <property name="title">
+     <string>Data</string>
+    </property>
+    <addaction name="actionLoad_data_source"/>
+    <addaction name="actionEdit_data_sources"/>
+    <addaction name="actionSave_global_command_source_as"/>
+    <addaction name="actionSave_data_in_table"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionPreferences"/>
+   </widget>
+   <widget class="QMenu" name="menuPlot">
+    <property name="title">
+     <string>Plot</string>
+    </property>
+    <widget class="QMenu" name="menuOptions_2">
+     <property name="title">
+      <string>Options</string>
+     </property>
+     <addaction name="actionSecondary_processing"/>
+     <addaction name="actionAuto_units"/>
+     <addaction name="actionCopy_names_to_clipboard"/>
+     <addaction name="actionFull_screen"/>
+     <addaction name="actionShow_value_table"/>
+    </widget>
+    <addaction name="actionNew_plot"/>
+    <addaction name="actionAdd_plot_frame_horizontally"/>
+    <addaction name="actionAdd_vertical_plot_frame"/>
+    <addaction name="actionClone_horizontally"/>
+    <addaction name="actionClone_vertically"/>
+    <addaction name="actionAdd_graph"/>
+    <addaction name="actionAdd_event"/>
+    <addaction name="actionCombine_graphs"/>
+    <addaction name="actionSeparate_graphs"/>
+    <addaction name="actionIntellectual_layout"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="actionQuick_save"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionNormal_mode"/>
+    <addaction name="actionMeasuring"/>
+    <addaction name="actionDraw_level"/>
+    <addaction name="actionArrow_with_text"/>
+    <addaction name="actionZoom_X"/>
+    <addaction name="actionZoom_Y"/>
+    <addaction name="actionZoom_XY"/>
+    <addaction name="actionMotion"/>
+    <addaction name="actionPrevious_scope"/>
+    <addaction name="actionNext_scope"/>
+    <addaction name="actionAutoscale"/>
+    <addaction name="actionFast_secondary_processing"/>
+    <addaction name="separator"/>
+    <addaction name="menuOptions_2"/>
+   </widget>
+   <addaction name="menuData"/>
+   <addaction name="menuPlot"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+?</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutQtRole</enum>
+   </property>
+  </action>
+  <action name="actionLoad_data_source">
+   <property name="text">
+    <string>Load data source</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/preferences</normaloff>:/preferences</iconset>
+   </property>
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+   <property name="toolTip">
+    <string>Preferences (Ctrl + Shift + P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionAbout_JaG">
+   <property name="text">
+    <string>About JaG</string>
+   </property>
+  </action>
+  <action name="actionNew_plot">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/new_plot</normaloff>:/new_plot</iconset>
+   </property>
+   <property name="text">
+    <string>New plot</string>
+   </property>
+   <property name="toolTip">
+    <string>New plot (Ctrl + Shift + N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionAdd_graph">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/styles/gray/gray_plus</normaloff>:/styles/gray/gray_plus</iconset>
+   </property>
+   <property name="text">
+    <string>Add graph</string>
+   </property>
+   <property name="toolTip">
+    <string>Add graph (Ctrl + Shift + A)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
+   </property>
+  </action>
+  <action name="actionAutoscale">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/autoscale</normaloff>:/autoscale</iconset>
+   </property>
+   <property name="text">
+    <string>Autoscale</string>
+   </property>
+   <property name="toolTip">
+    <string>Autoscale (Ctrl + A)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionZoom_X">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/zoom_x</normaloff>:/zoom_x</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom X</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom X (Ctrl + X)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionZoom_Y">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/zoom_y</normaloff>:/zoom_y</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Y</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom Y (Ctrl + Y)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionZoom_XY">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/zoom_xy</normaloff>:/zoom_xy</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom XY</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom XY (Ctrl + R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionCombine_graphs">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/combine</normaloff>:/combine</iconset>
+   </property>
+   <property name="text">
+    <string>Combine graphs</string>
+   </property>
+   <property name="toolTip">
+    <string>Combine graphs (Ctrl+-)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionSeparate_graphs">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/separate</normaloff>:/separate</iconset>
+   </property>
+   <property name="text">
+    <string>Separate graphs</string>
+   </property>
+   <property name="toolTip">
+    <string>Separate graphs (Ctrl+|)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+|</string>
+   </property>
+  </action>
+  <action name="actionMeasuring">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/measuring</normaloff>:/measuring</iconset>
+   </property>
+   <property name="text">
+    <string>Measuring</string>
+   </property>
+   <property name="toolTip">
+    <string>Measuring mode (Ctrl + M)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionNormal_mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/arrow</normaloff>:/arrow</iconset>
+   </property>
+   <property name="text">
+    <string>Normal mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Normal mode (Ctrl + N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>&amp;Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/print</normaloff>:/print</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/saveAs</normaloff>:/saveAs</iconset>
+   </property>
+   <property name="text">
+    <string>Save as ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionQuick_save">
+   <property name="text">
+    <string>Quick save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionTips">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/helpDialog</normaloff>:/helpDialog</iconset>
+   </property>
+   <property name="text">
+    <string>Tips</string>
+   </property>
+  </action>
+  <action name="actionIntellectual_layout">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/idea</normaloff>:/idea</iconset>
+   </property>
+   <property name="text">
+    <string>Intellectual layout</string>
+   </property>
+   <property name="toolTip">
+    <string>Intellectual layout (Ctrl-i)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionSecondary_processing">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/function</normaloff>:/function</iconset>
+   </property>
+   <property name="text">
+    <string>Secondary processing</string>
+   </property>
+   <property name="toolTip">
+    <string>Secondary processing (Ctrl + F)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionAuto_units">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/units</normaloff>:/units</iconset>
+   </property>
+   <property name="text">
+    <string>Set units automatically</string>
+   </property>
+  </action>
+  <action name="actionCopy_names_to_clipboard">
+   <property name="text">
+    <string>Copy names to clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="actionFull_screen">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/full_screen</normaloff>:/full_screen</iconset>
+   </property>
+   <property name="text">
+    <string>Full screen</string>
+   </property>
+   <property name="toolTip">
+    <string>Full screen (F11)</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionAdd_event">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/addCommand</normaloff>:/addCommand</iconset>
+   </property>
+   <property name="text">
+    <string>Add event</string>
+   </property>
+   <property name="toolTip">
+    <string>Add event</string>
+   </property>
+  </action>
+  <action name="actionEdit_data_sources">
+   <property name="text">
+    <string>Edit data sources</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
+   </property>
+  </action>
+  <action name="actionShow_value_table">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/table</normaloff>:/table</iconset>
+   </property>
+   <property name="text">
+    <string>Show value table</string>
+   </property>
+  </action>
+  <action name="actionSave_global_command_source_as">
+   <property name="text">
+    <string>Save global event source as</string>
+   </property>
+  </action>
+  <action name="actionNext_scope">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/forward</normaloff>:/forward</iconset>
+   </property>
+   <property name="text">
+    <string>Next scope</string>
+   </property>
+   <property name="toolTip">
+    <string>Next scope (Ctrl + Shift + Z)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionPrevious_scope">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/backward</normaloff>:/backward</iconset>
+   </property>
+   <property name="text">
+    <string>Previous scope</string>
+   </property>
+   <property name="toolTip">
+    <string>Previous scope (Ctrl + Z)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionSave_data_in_table">
+   <property name="text">
+    <string>Save data in table</string>
+   </property>
+  </action>
+  <action name="actionMotion">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/motion</normaloff>:/motion</iconset>
+   </property>
+   <property name="text">
+    <string>Motion</string>
+   </property>
+  </action>
+  <action name="actionArrow_with_text">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/arrowedText</normaloff>:/arrowedText</iconset>
+   </property>
+   <property name="text">
+    <string>Arrow with text</string>
+   </property>
+  </action>
+  <action name="actionFast_secondary_processing">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/window_function</normaloff>:/window_function</iconset>
+   </property>
+   <property name="text">
+    <string>Fast secondary processing</string>
+   </property>
+   <property name="toolTip">
+    <string>Fast secondary processing (Ctrl + Shift + F)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+F</string>
+   </property>
+  </action>
+  <action name="actionDraw_level">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/level</normaloff>:/level</iconset>
+   </property>
+   <property name="text">
+    <string>Draw level</string>
+   </property>
+  </action>
+  <action name="actionAdd_plot_frame_horizontally">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/new_frame_hor</normaloff>:/new_frame_hor</iconset>
+   </property>
+   <property name="text">
+    <string>Add horizontal plot frame </string>
+   </property>
+  </action>
+  <action name="actionAdd_vertical_plot_frame">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/new_frame_ver</normaloff>:/new_frame_ver</iconset>
+   </property>
+   <property name="text">
+    <string>Add vertical plot frame</string>
+   </property>
+  </action>
+  <action name="actionClone_horizontally">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/clone_hor</normaloff>:/clone_hor</iconset>
+   </property>
+   <property name="text">
+    <string>Clone horizontally</string>
+   </property>
+  </action>
+  <action name="actionClone_vertically">
+   <property name="icon">
+    <iconset resource="../JaG.qrc">
+     <normaloff>:/clone_ver</normaloff>:/clone_ver</iconset>
+   </property>
+   <property name="text">
+    <string>Clone vertically</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyTabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>commonWidgets/mytabwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../JaG.qrc"/>
+ </resources>
+ <connections/>
+</ui>

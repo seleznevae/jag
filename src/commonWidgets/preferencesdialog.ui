@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PreferencesDialog</class>
+ <widget class="QDialog" name="PreferencesDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>838</width>
+    <height>946</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Preferences</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/preferences</normaloff>:/preferences</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="Style">
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+     </property>
+     <property name="currentIndex">
+      <number>8</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Application</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Applicarion settings</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="18" column="1">
+          <widget class="QCheckBox" name="dataSourceStrictCheckingCheckBox">
+           <property name="text">
+            <string>Strict checking during data source loading</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>Default directory</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="1">
+          <widget class="QCheckBox" name="progressShowingCheckBox">
+           <property name="text">
+            <string>Show loading progress in data choice dialog</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="1">
+          <widget class="QCheckBox" name="autoDimensionForEmptyCheckBox">
+           <property name="text">
+            <string>Use auto units only for empty units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QCheckBox" name="restorePositionCheckBox">
+           <property name="text">
+            <string>Restore previous session position of main window</string>
+           </property>
+          </widget>
+         </item>
+         <item row="14" column="1">
+          <widget class="QComboBox" name="guiStyleComboBox"/>
+         </item>
+         <item row="11" column="1">
+          <widget class="QCheckBox" name="showDataSourceEditingDialogCheckBox">
+           <property name="text">
+            <string>Show dialog after each data source loading</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1">
+          <widget class="QSpinBox" name="graphCaptureDistanceSpinBox">
+           <property name="minimum">
+            <number>3</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QDoubleSpinBox" name="erasingTimerDoubleSpinBox">
+           <property name="singleStep">
+            <double>0.200000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="19" column="1">
+          <widget class="QSpinBox" name="errorsNumberSpinBox">
+           <property name="maximum">
+            <number>999999999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string>Erasing timer interval in data choise dialog</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_39">
+           <property name="text">
+            <string>Application language</string>
+           </property>
+          </widget>
+         </item>
+         <item row="19" column="0">
+          <widget class="QLabel" name="label_38">
+           <property name="text">
+            <string>Maximum number of noncritical errors in data sources</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>Graph capture distance (in pixels)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="14" column="0">
+          <widget class="QLabel" name="label_36">
+           <property name="text">
+            <string>Application GUI Style</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="languageComboBox"/>
+         </item>
+         <item row="13" column="1">
+          <widget class="QCheckBox" name="drawValuesInMeasuringModeCheckBox">
+           <property name="text">
+            <string>Draw current values in measuring mode</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_52">
+           <property name="text">
+            <string>Length of matching substring for intellectual layout</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
+          <widget class="QSpinBox" name="numCharForRelatedGraphsSpinBox">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLineEdit" name="defaultDirectoryLineEdit"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="defaultDirectoryPushButton">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>:/directory</normaloff>:/directory</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="20" column="1">
+          <widget class="QCheckBox" name="latexMarkupCheckBox">
+           <property name="text">
+            <string>Use LaTeX like markup </string>
+           </property>
+          </widget>
+         </item>
+         <item row="15" column="1">
+          <widget class="AnyComboBox" name="colorSchemeWidget" native="true"/>
+         </item>
+         <item row="15" column="0">
+          <widget class="QLabel" name="label_51">
+           <property name="text">
+            <string>Color scheme</string>
+           </property>
+          </widget>
+         </item>
+         <item row="16" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Icon color</string>
+           </property>
+          </widget>
+         </item>
+         <item row="16" column="1">
+          <widget class="AnyComboBox" name="iconColorChoiceWidget" native="true"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Copyable graph properties</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>758</width>
+               <height>418</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="QCheckBox" name="isDimensionCopyableCheckBox">
+                <property name="text">
+                 <string>Dimension</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isLineColorCopyableCheckBox">
+                <property name="text">
+                 <string>Line color</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isLineWidthCopyableCheckBox">
+                <property name="text">
+                 <string>Line width</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isLineStyleCopyableCheckBox">
+                <property name="text">
+                 <string>Line style</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isInterpolationCopyableCheckBox">
+                <property name="text">
+                 <string>Interpolation</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isStringRepresentationCheckBox">
+                <property name="text">
+                 <string>Representation</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isScatterShapeCopyableCheckBox">
+                <property name="text">
+                 <string>Marker shape</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isScatterSizeCopyableCheckBox">
+                <property name="text">
+                 <string>Marker size</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isScatterDecimationCopyableCheckBox">
+                <property name="text">
+                 <string>Marker decimation</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isBrushStyleCopyableCheckBox">
+                <property name="text">
+                 <string>Brush style</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isBrushColorCopyableCheckBox">
+                <property name="text">
+                 <string>Brush color</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isBrushBasisCopyableCheckBox">
+                <property name="text">
+                 <string>Brush basis</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isTransformationCopyableCheckBox">
+                <property name="text">
+                 <string>Transformation properties</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="isFiltersCopyableCheckBox">
+                <property name="text">
+                 <string>Filters</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_7">
+      <attribute name="title">
+       <string>Toolbar</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="toolbarActionsGroupbox">
+         <property name="title">
+          <string>Toolbar actions</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QScrollArea" name="scrollArea_2">
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>772</width>
+               <height>800</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <item>
+               <widget class="QWidget" name="toolBarActionsWidget" native="true"/>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_8">
+      <attribute name="title">
+       <string>Footer</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <layout class="QFormLayout" name="formLayout_4">
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_59">
+           <property name="text">
+            <string>Left footer</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_60">
+           <property name="text">
+            <string>Central footer</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_61">
+           <property name="text">
+            <string>Right footer</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="isFooterVisibleCheckBox">
+           <property name="text">
+            <string>Print footer during conversion to image</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_62">
+           <property name="text">
+            <string>Footer font family</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QFontComboBox" name="footerFontComboBox"/>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_63">
+           <property name="text">
+            <string>Footer font size</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="footerFontSizeSpinBox">
+           <property name="minimum">
+            <number>4</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="LineEditWithUnicodeDialog" name="leftFooterLineEdit" native="true"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="LineEditWithUnicodeDialog" name="centralFooterLineEdit" native="true"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="LineEditWithUnicodeDialog" name="rightFooterLineEdit" native="true"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_9">
+      <attribute name="title">
+       <string>Zoom</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_14">
+       <item>
+        <layout class="QFormLayout" name="formLayout_5">
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_57">
+           <property name="text">
+            <string>X zoom range policy</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="AnyComboBox" name="xZoomRangeEvaluationPolicyComboBox" native="true"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="wheelZoomEnableCheckBox">
+           <property name="text">
+            <string>Wheel zoom is enabled</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_58">
+           <property name="text">
+            <string>Y zoom range policy</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="AnyComboBox" name="yZoomRangeEvaluationPolicyComboBox" native="true"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_65">
+           <property name="text">
+            <string>Zoom shadow color</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="ColorChoiseWidget" name="zoomShadowColorWidget" native="true"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="QCheckBox" name="isZommShadowEnabledCheckBox">
+           <property name="text">
+            <string>Shadow region outside of zoom range</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_10">
+      <attribute name="title">
+       <string>Fast sec proc</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="FastSecProcRequestVectorEditor" name="fastSecProcRequestVectorEditorWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Plot appearance</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Specify default appearance of the plottable objects</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+       </property>
+       <property name="verticalSpacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>Double to string formatting precision</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="doubleToStringPrecisonSpinBox">
+         <property name="minimum">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Line width</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="lineWidthDoubleSpinBox">
+         <property name="singleStep">
+          <double>0.500000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Interpolation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="AnyComboBox" name="lineInterpolationComboBox" native="true"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>Marker size</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QDoubleSpinBox" name="scatterSizeDoubleSpinBox">
+         <property name="minimum">
+          <double>4.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>Marker decimation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QSpinBox" name="scatterDecimationSpinBox">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>X label</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="LineEditWithUnicodeDialog" name="xLabelLineEdit" native="true"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>Tracer size</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QSpinBox" name="tracerSizeSpinBox"/>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>X tick spacing</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QDoubleSpinBox" name="xTickSpacingDoubleSpinBox">
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_53">
+         <property name="text">
+          <string>X tick evaluation policy</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="AnyComboBox" name="xTickEvaluationPolicyComboBox" native="true"/>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_55">
+         <property name="text">
+          <string>X range evaluation policy</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="AnyComboBox" name="xRangeEvaluationPolicyComboBox" native="true"/>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>Y tick spacing</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QDoubleSpinBox" name="yTickSpacingDoubleSpinBox">
+         <property name="minimum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="label_54">
+         <property name="text">
+          <string>Y tick evaluation policy</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <widget class="AnyComboBox" name="yTickEvaluationPolicyComboBox" native="true"/>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="label_56">
+         <property name="text">
+          <string>Y range evaluation policy</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="AnyComboBox" name="yRangeEvaluationPolicyComboBox" native="true"/>
+       </item>
+       <item row="14" column="1">
+        <widget class="QCheckBox" name="isEdgeXTicksModificationEnabledCheckBox">
+         <property name="text">
+          <string>Modify edge X ticks</string>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="1">
+        <widget class="QCheckBox" name="isEdgeYTicksModificationEnabledCheckBox">
+         <property name="text">
+          <string>Modify edge Y ticks</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="0">
+        <widget class="QLabel" name="label_37">
+         <property name="text">
+          <string>Axis and grid width increase before plot saving</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="1">
+        <widget class="QDoubleSpinBox" name="objectWidthIncreaseDoubleSpinBox">
+         <property name="maximum">
+          <double>2.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="0">
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>Graphs width increase before plot saving</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="1">
+        <widget class="QDoubleSpinBox" name="graphWidthIncreaseDoubleSpinBox">
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="0">
+        <widget class="QLabel" name="label_43">
+         <property name="text">
+          <string>Policy for parameters naming</string>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="1">
+        <widget class="AnyComboBox" name="parameterNamingPolicyComboBox" native="true"/>
+       </item>
+       <item row="21" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="22" column="0">
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="23" column="1">
+        <widget class="QCheckBox" name="unitsVisibilityCheckBox">
+         <property name="text">
+          <string>Show units</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>Love / Hate parameters</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Set regular expressions for favourite and hate paramers filters that can be used in data choise dialog</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QFormLayout" name="formLayout_3">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Favourite parameters:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPlainTextEdit" name="favouritePlainTextEdit"/>
+         </item>
+         <item row="1" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Hate parameters:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPlainTextEdit" name="hatePlainTextEdit"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>Units</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Set regular expressions that will be used to automatically determine dimension of a graph</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>Unit label for dimensionless parameter</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="LineEditWithUnicodeDialog" name="dimensionlessUnitLineEdit" native="true"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="DefaultDimensionWidget" name="defaultDimensionWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_11">
+      <attribute name="title">
+       <string>Plot style</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_15">
+       <item>
+        <widget class="PlotStyleChoosingWidget" name="plotStyleChoosingWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Plugins</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="PluginListVectorEditor" name="pluginsPathListEditingWidget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="defaultPushButton">
+       <property name="toolTip">
+        <string>Set all preferences to the default values</string>
+       </property>
+       <property name="text">
+        <string>Default settings</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="applyButton">
+       <property name="text">
+        <string>Apply</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="applyAndSaveButton">
+       <property name="text">
+        <string>Save and Apply</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LineEditWithUnicodeDialog</class>
+   <extends>QWidget</extends>
+   <header>commonWidgets/lineeditwithunicodedialog.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AnyComboBox</class>
+   <extends>QWidget</extends>
+   <header location="global">commonWidgets/anycombobox.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorChoiseWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">commonWidgets/colorchoisewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DefaultDimensionWidget</class>
+   <extends>QWidget</extends>
+   <header>dimensiondialog/defaultdimensionwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FastSecProcRequestVectorEditor</class>
+   <extends>QWidget</extends>
+   <header>commonWidgets/fastsecprocrequestvectoreditor.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PlotStyleChoosingWidget</class>
+   <extends>QWidget</extends>
+   <header>commonWidgets/plotstylechoosingwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PluginListVectorEditor</class>
+   <extends>QWidget</extends>
+   <header>commonWidgets/pluginlistvectoreditor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

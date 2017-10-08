@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PenChoiceWidget</class>
+ <widget class="QWidget" name="PenChoiceWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>190</width>
+    <height>93</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="penWidthDoubleSpinBox">
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="ColorChoiseWidget" name="colorChoiceWidget" native="true">
+       <zorder>lineStyleWidget</zorder>
+      </widget>
+     </item>
+     <item>
+      <widget class="AnyComboBox" name="lineStyleWidget" native="true"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AnyComboBox</class>
+   <extends>QWidget</extends>
+   <header location="global">commonWidgets/anycombobox.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorChoiseWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">commonWidgets/colorchoisewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

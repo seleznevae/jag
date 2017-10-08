@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ArrowedTextPrefsEditingWidget</class>
+ <widget class="QWidget" name="ArrowedTextPrefsEditingWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="LabelPrefsEditingWidget" name="labelPrefEditingWidget" native="true"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Background color</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="ColorChoiseWidget" name="backgroundColorWidget" native="true"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Line pen</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PenChoiceWidget" name="penEditingWidget" native="true"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Ending</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="AnyComboBox" name="arrowEndingWidget" native="true"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PenChoiceWidget</class>
+   <extends>QWidget</extends>
+   <header>commonWidgets/penchoicewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LabelPrefsEditingWidget</class>
+   <extends>QWidget</extends>
+   <header>commonWidgets/editingWidgets/labelprefseditingwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AnyComboBox</class>
+   <extends>QWidget</extends>
+   <header location="global">commonWidgets/anycombobox.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorChoiseWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">commonWidgets/colorchoisewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

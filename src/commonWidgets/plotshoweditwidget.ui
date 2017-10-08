@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlotShowEditWidget</class>
+ <widget class="QWidget" name="PlotShowEditWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>658</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="TileManagerWithToolbar" name="tileManagerWithToolbar" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>600</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="PlotHierarchyWidget" name="plotHierarchyWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <column>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="PlotControlWidgetWrapper" name="plotControlWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="AxisControlWidgetWrapper" name="axisControlWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="AnchorControlWidgetWrapper" name="anchorControlWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="EventControlWidgetWrapper" name="eventControlWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="MultiModelControlWidgetWrapper" name="multiModelControlWidget" native="true"/>
+        </item>
+        <item>
+         <widget class="ArrowedTextControlWidgetWrapper" name="arrowedTextControlwidget" native="true"/>
+        </item>
+        <item>
+         <widget class="HorizontalLevelControlWidgetWrapper" name="horizontalLevelControlWidget" native="true"/>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotHierarchyWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>controlWidgets/plothierarchywidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>AxisControlWidgetWrapper</class>
+   <extends>QWidget</extends>
+   <header>controlwrappers/axiscontrolwidgetwrapper.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EventControlWidgetWrapper</class>
+   <extends>QWidget</extends>
+   <header location="global">controlwrappers/eventcontrolwidgetwrapper.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AnchorControlWidgetWrapper</class>
+   <extends>QWidget</extends>
+   <header>controlwrappers/anchorcontrolwidgetwrapper.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PlotControlWidgetWrapper</class>
+   <extends>QWidget</extends>
+   <header>controlwrappers/plotcontrolwidgetwrapper.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MultiModelControlWidgetWrapper</class>
+   <extends>QWidget</extends>
+   <header>controlwrappers/multimodelcontrolwidgetwrapper.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ArrowedTextControlWidgetWrapper</class>
+   <extends>QWidget</extends>
+   <header>controlwrappers/arrowedtextcontrolwidgetwrapper.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>HorizontalLevelControlWidgetWrapper</class>
+   <extends>QWidget</extends>
+   <header>controlwrappers/horizontallevelcontrolwidgetwrapper.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TileManagerWithToolbar</class>
+   <extends>QWidget</extends>
+   <header>commonWidgets/tilemanagerwithtoolbar.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

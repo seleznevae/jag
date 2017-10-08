@@ -1,0 +1,58 @@
+dist: trusty
+sudo: required
+
+language:
+  - cpp
+  
+compiler:
+  - gcc
+   
+#addons:
+#  apt:
+#    sources: ['ubuntu-toolchain-r-test']
+#    packages:
+#      - gcc-6
+#      - g++-6
+      
+install: 
+  - sudo apt-get install qt4-qmake build-essential g++ 
+  # - sudo apt-get install libboost-all-dev
+  - sudo apt-get install libsndfile1-dev qt4-default libfftw3-dev portaudio19-dev 
+  - sudo apt-get install libfaad-dev zlib1g-dev libusb-1.0-0-dev mesa-common-dev
+  - sudo apt-get install libgl1-mesa-dev libqt4-opengl-dev libsamplerate-dev libqwt-dev
+  - wget -O boost_1_64_0.tar.gz http://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.gz/download
+  - tar xzf boost_1_64_0.tar.gz
+  - export CPLUS_INCLUDE_PATH=`pwd`/boost_1_64_0/
+
+script:
+  # Building
+  - cd src
+  - qmake PREFIX=/usr
+  - make -j$(nproc)
+  - make INSTALL_ROOT=appdir install ; find appdir/
+  - cd ..
+  - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" 
+  - chmod a+x linuxdeployqt*.AppImage
+  - unset QTDIR; unset QT_PLUGIN_PATH ; unset LD_LIBRARY_PATH
+  - ls ./deploy/*.desktop
+  - ./linuxdeployqt*.AppImage ./deploy/*.desktop -bundle-non-qt-libs
+  - ./linuxdeployqt*.AppImage ./deploy/*.desktop -appimage
+  - ls ./deploy
+  - ls .
+  
+after_success:
+  - ls ./*.AppImage
+  - curl --upload-file ./JaG*.AppImage https://transfer.sh/APPNAME-git.$(git rev-parse --short HEAD)-x86_64.AppImage
+  
+deploy:
+  provider: releases
+  api_key: '$GITHUB_API_KEY'
+  file: 'JaG-x86_64.AppImage'
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
+#  on:
+#    tags
+#  on:
+#    branch: dev
