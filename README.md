@@ -1,4 +1,8 @@
 # jag
+
+[![Build Status](https://travis-ci.org/seleznevae/jag.svg?branch=master)](https://travis-ci.org/seleznevae/jag)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 jag - just a grapher
 
 Jag is a simple grapher which was created for telemetry data analyzing and simple plot creation. Jag is based on QCustomPlot v.1.3.2 (http://www.qcustomplot.com/ ). Some features were not implemented on purpose to keep jag as simple as possible. As a result **jag can't plot surfaces, graphs in polar coordinates, financial plots, bar plots etc**.
