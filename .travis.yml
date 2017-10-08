@@ -28,8 +28,8 @@ install:
   - ./b2 install
   - cd ..
   - export CPLUS_INCLUDE_PATH=`pwd`/boost_1_64_0/
-  - export LD_LIBRARY_PATH =`pwd`/boost_1_64_0/boost_build/lib
-  - export LIBRARY_PATH =`pwd`/boost_1_64_0/boost_build/lib
+  - export LD_LIBRARY_PATH=`pwd`/boost_1_64_0/boost_build/lib
+  - export LIBRARY_PATH=`pwd`/boost_1_64_0/boost_build/lib
 
 script:
   # Building
