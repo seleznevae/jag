@@ -13,7 +13,7 @@ See the [project page](https://seleznevae.github.io/jag.org/) for more informati
 
 # Features
 
-1. Arbitrary layout. You can easily change number of graphs and axes, move graphs from one axes box to another, change axes boxes location.
+1. Arbitrary layout. You can easily change the number of graphs and axes, move graphs from one axes box to another, change axes boxes location.
 2. Comprehensive dialog to choose parameters from data sources (particularly useful if you have dozens or hundreds of parameters in each data source).
 3. Built-in secondary processing which allows you easily perform basic mathematical computations on your data (library of available functions is not very huge at the moment (about 40 functions) but in future it will be significantly expanded). Of course basic mathematical operators (+,-,*,/,^) are available.
 4. All usual means to change graph properties, convert plots to images, preferences to customize JaG appearance and behavior, shortcuts for all essential actions.
@@ -46,7 +46,7 @@ See a simple dummy example of such plugin in [pluginExample directory](https://g
 ![Sophisticated layout with different markers on the graphs](https://github.com/seleznevae/jag/blob/master/plotExamples/gallery_3.png "Sophisticated layout with different markers on the graphs")
 
 # Download
-You can download the lates version of jag on the [release page](https://github.com/seleznevae/jag/releases).
+You can download the latest version of jag on the [release page](https://github.com/seleznevae/jag/releases).
 
 
 
