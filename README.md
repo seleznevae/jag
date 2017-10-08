@@ -6,7 +6,9 @@
 jag - just a grapher
 
 Jag is a simple grapher which was created for telemetry data analyzing and simple plot creation. Jag is based on QCustomPlot v.1.3.2 (http://www.qcustomplot.com/ ). Some features were not implemented on purpose to keep jag as simple as possible. As a result **jag can't plot surfaces, graphs in polar coordinates, financial plots, bar plots etc**.
-At the moment jag supports CSV format and data in table format (see examples in "tlmExamples" directory). If you want jag to support specific binary formats you can connect with author (seleznevae@protonmail.com)  or implement them yourself.
+At the moment jag supports CSV format and data in table format (see examples in "tlmExamples" directory). 
+
+See the [project page](https://seleznevae.github.io/jag.org/) for more information.
 
 # Features
 
@@ -36,11 +38,11 @@ Simple dummy example of such plugin is in [pluginExample directory](https://gith
 
 # Screenshots
 
-![Basic jag features](https://github.com/seleznevae/jag/blob/dev/plotExamples/basic_JaG.png "Basic jag features")
+![Basic usage](https://github.com/seleznevae/jag/blob/master/plotExamples/gallery_1.png "Basic usage")
 
-![Arrowed text in jag](https://github.com/seleznevae/jag/blob/dev/plotExamples/Arrowed%20Text%20in%20JaG%20-%20Nice%20'N'%20Easy.png "Arrowed text in jag")
+![Events with fill and arrows with comments](https://github.com/seleznevae/jag/blob/master/plotExamples/gallery_2.png "Events with fill and arrows with comments")
 
-![jag_Custom](https://github.com/seleznevae/jag/blob/dev/plotExamples/jag_custom.png "jag custom")
+![Sophisticated layout with different markers on the graphs](https://github.com/seleznevae/jag/blob/master/plotExamples/gallery_3.png "Sophisticated layout with different markers on the graphs")
 
 
 
