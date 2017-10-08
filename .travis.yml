@@ -22,8 +22,7 @@ install:
   - sudo apt-get install libgl1-mesa-dev libqt4-opengl-dev libsamplerate-dev libqwt-dev
   - wget -O boost_1_64_0.tar.gz http://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.gz/download
   - tar xzf boost_1_64_0.tar.gz
-  - ls
-  - cd /boost/boost_1_64_0
+  - cd ./boost_1_64_0
   - mkdir boost_build
   - ./bootstrap.sh --show-libraries
   - ./bootstrap.sh --prefix=`pwd`/boost_build
