@@ -29,6 +29,7 @@ script:
   - cd src
   - qmake PREFIX=/usr
   - make -j$(nproc)
+  - mkdir appdir
   - make INSTALL_ROOT=appdir install ; find appdir/
   - cd ..
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" 
