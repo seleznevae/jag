@@ -41,6 +41,7 @@ script:
   - cd ..
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" 
   - chmod a+x linuxdeployqt*.AppImage
+#  - unset QTDIR; unset QT_PLUGIN_PATH ; unset LD_LIBRARY_PATH
   - unset QTDIR; unset QT_PLUGIN_PATH ; unset LD_LIBRARY_PATH
   - ls ./deploy/*.desktop
   - cp ./src/resources/images/application/jag.png
