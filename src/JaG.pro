@@ -12,16 +12,7 @@ CONFIG += c++14
 
 LIBS += -lm -ldl -lboost_system -lboost_filesystem
 
-#CONFIG(release,debug|release){
-#    LIBS += -lQSCore
-#    LIBS += -lQSCharts
-#}
-#CONFIG(debug,debug|release){
-#    LIBS +=  -lQSCored
-#    LIBS +=  -lQSChartsd
-#    #QMAKE_LFLAGS +=  -fsanitize=address
-#   # QMAKE_CXXFLAGS += -fsanitize=address
-#}
+
 
 include(./commonWidgets/widgettilemanager/widgettilemanager.pri)
 include(./commonWidgets/qsint/qsint.pri)

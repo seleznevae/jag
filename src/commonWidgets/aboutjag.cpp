@@ -17,7 +17,7 @@ AboutJag::AboutJag(QWidget *parent) :
                               "Based on Qt " + QT_VERSION_STR +
                               " (GCC " +  __VERSION__ + ")<br>"
                               " Compiled on  " +  __DATE__ + "<br>"
-                              "Copyright(c) 2016<br>"
+                              "Copyright(c) 2016 - 2017<br>"
                               "Seleznev Anton<br>"
                               "seleznevae@protonmail.com"
                               );

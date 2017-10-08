@@ -1,7 +1,0 @@
-
-tt.xml -> /usr/share/mime/packages/tt.xml (?? /usr/share/mime/application/tt.xml )
-# update-mime-database /usr/share/mime
-
-
-JaG.desktop   ->   /usr/share/applications
-# update-desktop-database
