@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/seleznevae/jag.svg?branch=master)](https://travis-ci.org/seleznevae/jag)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![GitHub tag](https://img.shields.io/github/tag/expressjs/express.svg)]()
 
 jag - just a grapher
 
@@ -25,7 +26,7 @@ To build jag you will need:
 
 # Platforms
 
-Jag is based on Boost, Qt and libraries based on Qt. Hence in theory jag is a cross-platform application. In "bin" directory executable files for Linux x64 and Windows7 x32 are available.
+Jag is based on Boost, Qt and libraries based on Qt. Hence in theory jag is a cross-platform application. 
 
 # Languages
 At the moment JaG GUI supports English and Russian languages.
@@ -44,6 +45,8 @@ Simple dummy example of such plugin is in [pluginExample directory](https://gith
 
 ![Sophisticated layout with different markers on the graphs](https://github.com/seleznevae/jag/blob/master/plotExamples/gallery_3.png "Sophisticated layout with different markers on the graphs")
 
+# Download
+You can download the lates version of jag on the [release page](https://github.com/seleznevae/jag/releases).
 
 
 
