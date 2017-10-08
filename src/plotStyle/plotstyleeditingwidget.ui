@@ -346,7 +346,7 @@
      </widget>
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
-       <string>Page</string>
+       <string>Events</string>
       </attribute>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
@@ -403,7 +403,7 @@
      </widget>
      <widget class="QWidget" name="tab_9">
       <attribute name="title">
-       <string>Page</string>
+       <string>Arrowed text</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_21">
        <item>
