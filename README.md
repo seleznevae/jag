@@ -33,8 +33,8 @@ At the moment JaG GUI supports English and Russian languages.
 
 # Plugins 
 
-You can extend number of supported data formats with plugins. See API in [src/plugins/plugins_api.h](https://github.com/seleznevae/jag/blob/master/src/plugins/plugins_api.h).
-Simple dummy example of such plugin is in [pluginExample directory](https://github.com/seleznevae/jag/blob/master/pluginExample/).
+You can extend the number of supported data formats with plugins. See API in [src/plugins/plugins_api.h](https://github.com/seleznevae/jag/blob/master/src/plugins/plugins_api.h).
+See a simple dummy example of such plugin in [pluginExample directory](https://github.com/seleznevae/jag/blob/master/pluginExample/).
 
 
 # Screenshots
