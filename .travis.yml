@@ -35,6 +35,7 @@ script:
   - chmod a+x linuxdeployqt*.AppImage
   - unset QTDIR; unset QT_PLUGIN_PATH ; unset LD_LIBRARY_PATH
   - ls ./deploy/*.desktop
+  - cp ./src/resources/images/application/jag.png
   - ./linuxdeployqt*.AppImage ./deploy/*.desktop -bundle-non-qt-libs
   - ./linuxdeployqt*.AppImage ./deploy/*.desktop -appimage
   - ls ./deploy
