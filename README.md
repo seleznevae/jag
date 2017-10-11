@@ -51,7 +51,10 @@ To get familiar with **jag** see [getting started](https://seleznevae.github.io/
 # Download
 You can download the latest version of jag on the [release page](https://github.com/seleznevae/jag/releases).
 
-
+# TODO
+- [ ] Replace Qt4 with Qt5
+- [ ] Update to QCustompPlot 2
+- [ ] CI for Windows
 
 
 # License
