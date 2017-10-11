@@ -5,7 +5,7 @@
 
 jag - just a grapher
 
-Jag is a simple grapher which was created for telemetry data analyzing and simple plot creation. Jag is based on QCustomPlot v.1.3.2 (http://www.qcustomplot.com/ ). Some features were not implemented on purpose to keep jag as simple as possible. As a result **jag can't plot surfaces, graphs in polar coordinates, financial plots, bar plots etc**.
+Jag is a simple plotting application which was created for telemetry data analyzing and simple plot creation. Jag is based on QCustomPlot v.1.3.2 (http://www.qcustomplot.com/ ). Some features were not implemented on purpose to keep jag as simple as possible. As a result **jag can't plot surfaces, graphs in polar coordinates, financial plots, bar plots etc**.
 At the moment jag supports CSV format and data in table format (see examples in "tlmExamples" directory). 
 
 See the [project page](https://seleznevae.github.io/jag.org/) for more information.
