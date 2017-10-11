@@ -18,7 +18,6 @@ public:
 
     void setPlotStyle(const PlotStyle &style);
     PlotStyle plotStyle() const;
-
 signals:
     void styleChanged();
 private:

@@ -213,11 +213,13 @@ void PlotStyleChoosingWidget::treatCurrentItemChanging()
 //        mLayoutModel.setPlotStyle(mUserDefinedStyles.at(mUserDefinedStylesItems.indexOf(curItem)));
         createPlotWithStyle(mUserDefinedStyles.at(mUserDefinedStylesItems.indexOf(curItem)));
         ui->plotStyleEditingWidget->setPlotStyle(mUserDefinedStyles.at(mUserDefinedStylesItems.indexOf(curItem)));
+        ui->plotStyleEditingWidget->setVisible(true);
     } else {
         ui->removeButton->setEnabled(false);
 //        mLayoutModel.setPlotStyle(mDefaultStyles.at(mDefaultStylesItems.indexOf(curItem)));
         createPlotWithStyle(mDefaultStyles.at(mDefaultStylesItems.indexOf(curItem)));
         ui->plotStyleEditingWidget->setPlotStyle(mDefaultStyles.at(mDefaultStylesItems.indexOf(curItem)));
+        ui->plotStyleEditingWidget->setVisible(false);
     }
     ui->plotWidget->updateEverything();
     connectAll();
