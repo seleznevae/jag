@@ -44,6 +44,11 @@ See a simple dummy example of such plugin in [pluginExample directory](https://g
 
 ![Sophisticated layout with different markers on the graphs](https://github.com/seleznevae/jag/blob/master/plotExamples/gallery_3.png "Sophisticated layout with different markers on the graphs")
 
+
+# Jag in action
+
+Here is a small [youtube video](https://www.youtube.com/watch?v=IiRYgONja9E&feature=youtu.be) that demonstrates basic jag capabilities.
+
 # Getting started
 
 To get familiar with **jag** see [getting started](https://seleznevae.github.io/jag.org/getting-started/) page at the official project website.
