@@ -812,8 +812,11 @@ void PlotWidget::createAppearance()
         if (axisIndex != axisModelVector.size() - 1
                 && mPlotStyle.mXAxisPref.mIsAxisDrawingAtCenterEnabled == false) {
             axisRect->axis(QCPAxis::atBottom)->setTickLabels(false);
-            axisRect->axis(QCPAxis::atBottom)->setTickLabelType(mLayoutModel->timeAxisType());
+            //axisRect->axis(QCPAxis::atBottom)->setTickLabelType(mLayoutModel->timeAxisType());
         }
+
+        axisRect->axis(QCPAxis::atBottom)->setTickLabelType(mLayoutModel->timeAxisType());
+
         //ticks
 
 //        auto axisPen = axisRect->axis(QCPAxis::atLeft)->basePen();
